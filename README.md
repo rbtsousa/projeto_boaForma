@@ -10,5 +10,5 @@
       Botões 
         Estilizações.
       Navbar
-        Estilizações.
+        Estilizações..
       
