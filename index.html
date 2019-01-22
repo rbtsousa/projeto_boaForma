@@ -13,10 +13,73 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    
+    <header>
+            
+            <ul class="side-nav" id="menu-mobile">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Sobre o Boa Forma</a></li>
+                    <li><a href="">Serviços</a></li>
+                    <li><a href="">Unidades</a></li>
+                    <li><a href="">Contatos</a></li>
+            </ul>
+
+        <div class="navbar-fixed">
+            <nav class="navbar z-depth-0">
+                <div class="nav-wrapper container">
+                    <h1 class="logo_text">Centro Boa forma - Seu espaço de saúde</h1>
+                    
+                    <a href=""><img class="logo_img" src="img/logo.png" alt="Centro Boa Forma"></a>
+
+                    <ul class="right light hide-on-med-and-down ">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Sobre o Boa Forma</a></li>
+                        <li><a href="">Serviços</a></li>
+                        <li><a href="">Unidades</a></li>
+                        <li><a href="">Contatos</a></li>
+                    </ul>
+
+                    
+
+                    <a href="#" data-activates="menu-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+            
+        
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <section class="home bloco">
+        <div class="row container banner">
+            <div class="col s12 center">
+            
+                <h2 class="white-text light">O melhor treinamento funcional da região</h2>
+            
+                <p class="white-text light">Um novo conceito em prevenção, promoção e reabilitação da saúde 
+                para quem busca melhora do condicionamento e emagrecimento, além de ser divertido e desafiador. Quer experimentar?
+                </p>
+            
+                <div class="row">
+                <a class="btn btn-large blue-logo">Sobre nós</a>
+                <a class="btn btn-large white black-text">Contato</a>
+                </div>
+            </div>
+        </div>  
+        
+    </section>
+
     <!-- JQUERY-->
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- MATERALIZE JS-->
     <script src="js/materialize.js"></script>
+    /*JAVASCRIPT*/
+    <script>
+        $(document).ready(function(){
+            //MENU MOBILE //
+            $(".button-collapse").sideNav()
+        });
+    </script>
+
+
+
 </body>
 </html>
