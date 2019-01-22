@@ -6,9 +6,9 @@
   
   Semana 1 ->
       Estrutura base para o projeto.
-      Implementando funcionalidades a pagina home do projeto
+      Implementando funcionalidades a pagina home do projeto.
       Botões 
-        Estilizações
+        Estilizações.
       Navbar
-        Estilizações
+        Estilizações.
       
