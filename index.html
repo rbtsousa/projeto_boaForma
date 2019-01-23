@@ -13,14 +13,16 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
+
+    <!--HEADER-->
     <header>
             
             <ul class="side-nav" id="menu-mobile">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre o Boa Forma</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Unidades</a></li>
-                    <li><a href="">Contatos</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre o Boa Forma</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#unidades">Unidades</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
             </ul>
 
         <div class="navbar-fixed">
@@ -31,11 +33,11 @@
                     <a href=""><img class="logo_img" src="img/logo.png" alt="Centro Boa Forma"></a>
 
                     <ul class="right light hide-on-med-and-down ">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Sobre o Boa Forma</a></li>
-                        <li><a href="">Serviços</a></li>
-                        <li><a href="">Unidades</a></li>
-                        <li><a href="">Contatos</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre o Boa Forma</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#unidades">Unidades</a></li>
+                        <li><a href="#contatos">Contatos</a></li>
                     </ul>
 
                     
@@ -48,7 +50,8 @@
         </div>
 
     </header>
-    <section class="home bloco">
+    <!--HOME-->
+    <section class="home bloco scrollspy" id="home">
         <div class="row container banner">
             <div class="col s12 center">
             
@@ -66,20 +69,106 @@
         </div>  
         
     </section>
+    <!--SOBRE-->
+    
+    <section class="sobre bloco scrollspy" id="sobre">
+        <div class="row container">
+            <div class="col s12 center">
+                <h2 class="light">Sobre nós</h2>
+            </div>
+            
+            <div class="col s12 l6">
+                <p class="light">O Centro Boa Forma chegou a itabuno e região trazendo um novo conceito em prevenção,
+                    promoção da reabilitação da saúde. Localizada no centro da cidade, conta com facil estacionamento,
+                    salas amplas e climatizadas, ambiente confortável e seguro aos seus usuários. Suas instalações
+                    foram projetadas e equipadas sob medida, dentro dos padrões de acessibilidade para acolher principalmente
+                    pessoas com limitações funcionais. O centro dispões de uma equipe profissional e qualificada e com experiência
+                    no mercado, prezando sempre por tratamentos individualizados e baseados em evidências cientificas. Localizada
+                    no centro da cidade conta com fácil estacionamento, salas amplas e climatizadas, ambiente confortavel e seguro
+                    para seus usuários.
+                </p>
+            </div>
+
+            <div class="col s12 l6">
+                <div class="carousel carousel-slider" data-indicators="true">
+                        <a href="#" class="carousel-item" ><img src="img/banner-01.jpg" alt="Imagem Institucional"></a>
+                        <a href="#" class="carousel-item" ><img src="img/banner-02.jpg" alt="Imagem Institucional"></a>
+                        <a href="#" class="carousel-item" ><img src="img/banner-03.jpg" alt="Imagem Institucional"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row blue-logo missao-visao-valores">
+            <div class="container">
+                <article class="item col s12 m4 center">
+                    <span class="icon"><i class="material-icons medium">directions_run</i></span>
+                    <h3 class="light">Missão</h3>
+                    <p class="light">
+                        Promover a saúde e o bem-estar dos clientes com ações de prevenção, promoção e reabilitação
+                        através de tretamentos eficazes e humanização em Fisioterapia e suas vertentes.
+                    </p>
+
+                </article>
+
+                <article class="item col s12 m4 center">
+                        <span class="icon"><i class="material-icons medium">visibility</i></span>
+                        <h3 class="light">Visão</h3>
+                        <p class="light">
+                            Torna-se referência no cenário estadual, buscando a excelência dos serviços prestados, além
+                            de promover o desenvolvimento técnico-científico de sua equipe e da sociedade.
+                        </p>
+    
+                </article>
+                
+                <article class="item col s12 m4 center">
+                        <span class="icon"><i class="material-icons medium">grade</i></span>
+                        <h3 class="light">Valores</h3>
+                        <p class="light">
+                            ° Agir com ética frente aos clientes e colaboradores.<br>
+                            ° Tornar o ambiente de trabalho o mais familiar possível.<br>
+                            ° Priorizar a qualidade e excelência do atendimento, valorizando e qualificando a equipe.
+                        </p>
+    
+                </article>
+
+                
+            </div>
+
+        </div>
+        
+    </section>
+
+
 
     <!-- JQUERY-->
     <script src="js/jquery-3.3.1.min.js"></script>
+    
     <!-- MATERALIZE JS-->
     <script src="js/materialize.js"></script>
-    /*JAVASCRIPT*/
+    
+    <!--JAVASCRIPT-->
     <script>
         $(document).ready(function(){
             //MENU MOBILE //
             $(".button-collapse").sideNav()
+            //LINK
+            $(".scrollspy").scrollSpy({
+                scrollOffset: 0
+            });
+            //Carousel
+            $(".carousel.carousel-slider").carousel({
+                fullwidth: true
+            });
+            
+        });
+//ADICIONANDO NAVCOLOR
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 100){
+                $(".navbar"). addClass("nav-color");
+            } else{
+                $(".navbar"). removeClass("nav-color");
+            }
         });
     </script>
-
-
-
 </body>
 </html>

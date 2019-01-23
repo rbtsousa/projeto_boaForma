@@ -11,6 +11,30 @@ html, body {
     background-color: #2dc7d0;
 }
 
+/*LOGO*/
+.logo_text {
+    font-size: 0;
+    margin: 0;
+}
+.logo_img{
+    width: 100px;
+    margin-top: 15px;
+}
+
+/*MENU*/
+.navbar{
+    background-color: transparent;
+    transition: background 0.5 linear;
+}
+.navbar ul a:hover{
+    background-color: transparent;
+    color: #2dc7d0; 
+}
+.nav-color{
+    background-color: rgba(0,0,0,0.7);
+    transition: background 0.5 linear;
+}
+
 
 /*HOME*/
 
@@ -30,24 +54,52 @@ html, body {
     line-height: 1.8rem;
 }
 
-/*LOGO*/
-.logo_text {
-    font-size: 0;
-    margin: 0;
-}
-.logo_img{
-    width: 100px;
-    margin-top: 15px;
+/*HOME - ANIMATION*/
+
+@keyframes mudarbg{
+    40% {background-image: url(../img/bg2.jpg);}
+    80% {background-image: url(../img/bg3.jpg);}
+    100% {background-image: url(../img/bg.jpg);}
 }
 
-/*MENU*/
-.navbar{
-    background-color: transparent;
+/*SOBRE*/
+.sobre{
+    background-image: url('../img/textura1.png');
 }
-.navbar ul a:hover{
-    background-color: transparent;
-    color: #2dc7d0; 
+.sobre h2{
+    font-size: 2rem;
+    color: #212121;
+    text-transform: uppercase;
 }
+.sobre h2::after{
+    content: '';
+    display: block;
+    width: 100px;
+    border-top: 1px solid;
+    color: #2dc7d0;
+    margin: 15px auto;
+}
+.sobre p{
+    line-height: 1.8rem;
+    text-align: justify;
+}
+.sobre .missao-visao-valores{
+    padding: 20px 0;
+    margin-top: 35px;
+}
+.sobre .missao-visao-valores .icon{
+    color: #fff;
+}
+.sobre .missao-visao-valores h3{
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+.sobre .missao-visao-valores p{
+    color: #fff;
+    text-align: center;
+}
+
 /*CUSTOM*/
 nav {
     color: #fff;
@@ -69,21 +121,18 @@ nav.nav-extended .nav-wrapper {
 nav i,
 nav [class^="mdi-"], nav [class*="mdi-"],
 nav i.material-icons {
-  display: block;
-  font-size: 24px;
-  height: 94px;
-  line-height: 94px;
+display: block;
+font-size: 24px;
+height: 94px;
+line-height: 94px;
 }
-
-
-/*HOME - ANIMATION*/
-
-@keyframes mudarbg{
-    40% {background-image: url(../img/bg2.jpg);}
-    80% {background-image: url(../img/bg3.jpg);}
-    100% {background-image: url(../img/bg.jpg);}
+.side-nav{
+    background: url('../img/textura2.png'); 
 }
-
+.side-nav li>a{
+    color: #fff;
+    font-weight: 100; 
+}
 
 
 /* MEDIA */
@@ -99,6 +148,9 @@ nav i.material-icons {
     .banner h2{
         font-size: 4rem;}
 }  
+    .container{
+    width: 85%;
+}
 
 @media only screen and (min-width: 993px) {
     .banner {
@@ -106,4 +158,7 @@ nav i.material-icons {
     }
     .banner h2{
         font-size: 4rem;}
+    }
+    .container{
+        width: 90%;
     }
